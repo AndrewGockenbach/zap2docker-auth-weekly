@@ -36,10 +36,8 @@ ENV PATH $CHROMEDRIVER_DIR:$PATH
 ADD . /zap/
 
 ADD scripts /home/zap/.ZAP_D/scripts/scripts/active/
-ADD gsp.sh /home/zap 
 RUN chmod 777 /home/zap/.ZAP_D/scripts/scripts/active/ \
-	&& chown -R zap:zap /zap/ \
-	&& chmod 777 /home/zap/gsp.sh
+	&& chown -R zap:zap /zap/ 
 
 USER zap
 
@@ -47,4 +45,5 @@ RUN pip install -r /zap/requirements.txt
 
 VOLUME /zap/wrk
 WORKDIR /zap
+ADD gsp.sh /zap
 CMD gsp.sh
