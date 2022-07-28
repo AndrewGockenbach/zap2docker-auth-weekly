@@ -47,4 +47,4 @@ RUN pip install -r /zap/requirements.txt
 
 VOLUME /zap/wrk
 WORKDIR /zap
-CMD ["gsp.sh"]
+CMD gsp.sh
