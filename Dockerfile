@@ -45,4 +45,4 @@ RUN pip install -r /zap/requirements.txt
 
 VOLUME /zap/wrk
 WORKDIR /zap
-COPY . gsp.sh
+COPY gsp.sh .
